@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "serve-static": "npx serve ./out",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx --ignore-path .gitignore .",
     "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx --ignore-path .gitignore . --fix"
   },
