@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from 'next/image';
+import styles from './page.module.css';
 
 export default function Home() {
   return (
@@ -38,6 +38,8 @@ export default function Home() {
           priority
         />
       </div>
+
+      <h1>hello world</h1>
 
       <div className={styles.grid}>
         <a
@@ -91,5 +93,5 @@ export default function Home() {
         </a>
       </div>
     </main>
-  )
+  );
 }
