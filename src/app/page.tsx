@@ -10,6 +10,9 @@ export default function Home() {
           Hello World we are&nbsp;
           <code className={styles.code}>deployed!!</code>
         </h1>
+
+        <h1>deployed through GITHUB ACTIONS!</h1>
+
         <Link href="/foobar">go to foobar page!</Link>
         <div>
           <a
