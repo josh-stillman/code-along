@@ -12,6 +12,7 @@ export default function Home() {
         </h1>
 
         <h1>deployed through GITHUB ACTIONS!</h1>
+        <strong>AGAIN?!</strong>
 
         <Link href="/foobar">go to foobar page!</Link>
         <div>
