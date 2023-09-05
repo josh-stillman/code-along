@@ -10,6 +10,7 @@ const params = new URLSearchParams();
 params.set('sort', 'publishedAt:desc');
 
 export function NewsFeed() {
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const { data, error, isLoading } = useSWR<NewsItemsResponse>(
     `${process.env.NEXT_PUBLIC_API_URL}/api/news-items?${params.toString()}`,
     fetcher
