@@ -11,6 +11,8 @@ export default function Home() {
         <Link href="/foobar">go to foobar page!</Link>
       </div>
 
+      <h2>we're in dev!</h2>
+
       <NewsFeed />
     </main>
   );

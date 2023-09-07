@@ -15,6 +15,5 @@ concurrency:
 jobs:
   build-deploy-dev:
     uses: ./.github/workflows/build-deploy.yml
-    environment: dev
     secrets: inherit
 
