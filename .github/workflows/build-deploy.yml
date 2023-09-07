@@ -1,10 +1,15 @@
 on:
   workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
 
 jobs:
   # Build job
   build-and-deploy:
     runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
     env:
       NEXT_PUBLIC_API_URL: ${{ secrets.API_URL }}
     steps:

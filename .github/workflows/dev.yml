@@ -16,4 +16,6 @@ jobs:
   build-deploy-dev:
     uses: ./.github/workflows/build-deploy.yml
     secrets: inherit
+    with:
+      environment: dev
 
