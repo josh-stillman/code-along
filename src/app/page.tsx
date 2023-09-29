@@ -10,7 +10,9 @@ export default function Home() {
 
         <Link href="/foobar">go to foobar page!</Link>
       </div>
-      <h2>we are in dev!</h2>
+
+      <h2>we are in {process.env.NEXT_PUBLIC_ENV}!</h2>
+
       <NewsFeed />
     </main>
   );
