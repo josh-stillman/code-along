@@ -1,6 +1,6 @@
 'use client';
 import useSWR from 'swr';
-import { NewsItemsResponse } from '../types/api';
+import { NewsItemsResponse } from '../../types/api';
 import styles from './NewsFeed.module.css';
 
 const fetcher = (url: string) => fetch(url).then(res => res.json());
