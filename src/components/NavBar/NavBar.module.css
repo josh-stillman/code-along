@@ -1,0 +1,30 @@
+.navbar {
+  width: 100%;
+  height: 64px;
+  border-bottom: 3px solid burlywood;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-left: 16px;
+  padding-right: 86px;
+  box-shadow: -1px 11px 54px 10px rgba(130,100,100,0.45);
+}
+
+.siteHeader {
+    font-family: sans-shaded, sans-serif;
+    font-size: 32px;
+}
+
+.navLinkText {
+  font-family: frankfurter, sans-serif;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: blue;
+  cursor: pointer;
+}
+

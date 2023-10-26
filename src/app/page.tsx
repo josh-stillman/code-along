@@ -1,17 +1,16 @@
-import { NewsFeed } from '../components/NewsFeed';
+import { NewsFeed } from '../components/NewsFeed/NewsFeed';
 import styles from './page.module.css';
-import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <>
       <div className={styles.description}>
-        <h1>Hello World we are deployed!</h1>
-
-        <Link href="/foobar">go to foobar page!</Link>
+        <h1 className={styles.headline}>
+          Hello World, we are deployed in {process.env.NEXT_PUBLIC_ENV}!
+        </h1>
       </div>
-      <h2>we are in PROD!</h2>
+
       <NewsFeed />
-    </main>
+    </>
   );
 }

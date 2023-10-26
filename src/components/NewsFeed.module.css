@@ -1,9 +1,0 @@
-.newsItemList {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.newsItem {
-  margin: 20px 0;
-}
