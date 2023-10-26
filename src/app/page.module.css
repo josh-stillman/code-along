@@ -15,7 +15,6 @@
   max-width: var(--max-width);
   width: 100%;
   z-index: 2;
-  font-family: var(--font-mono);
 }
 
 .description a {
@@ -226,4 +225,10 @@
   to {
     transform: rotate(0deg);
   }
+}
+
+.headline {
+  font-family: sans-shaded, sans-serif;
+  font-size: 64px;
+  text-align: center;
 }
