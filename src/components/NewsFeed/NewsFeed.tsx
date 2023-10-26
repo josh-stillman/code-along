@@ -16,25 +16,39 @@ export function NewsFeed() {
     fetcher
   );
 
-  if (isLoading) return <div>loading...</div>;
-
-  if (error || !data?.data) return <div>failed to load</div>;
-
   return (
     <div className={styles.newsItemList}>
-      <h1 className={styles.hero}>NewsFeed! 🗞️</h1>
+      <div className={styles.headerContainer}>
+        <h1 className={styles.hero}>NewsFeed!</h1>
 
-      {data.data.map(({ attributes, id }) => (
-        <div key={id} className={styles.newsItem}>
-          <h2 className={styles.headline}>{attributes.Title}</h2>
-
-          <h3 className={styles.body}>
-            <i>{attributes.Body}</i>
-          </h3>
-
-          <span>{new Date(attributes.publishedAt).toLocaleDateString()}</span>
+        <div
+          className={`${styles.newspaper} ${
+            isLoading
+              ? styles['newspaper--loading']
+              : styles['newspaper--settled']
+          }`}
+        >
+          🗞
         </div>
-      ))}
+      </div>
+
+      <div className={styles.itemsContainer}>
+        {!isLoading &&
+          !error &&
+          data?.data.map(({ attributes, id }) => (
+            <div key={id} className={styles.newsItem}>
+              <h2 className={styles.headline}>{attributes.Title}</h2>
+
+              <h3 className={styles.body}>
+                <i>{attributes.Body}</i>
+              </h3>
+
+              <span>
+                {new Date(attributes.publishedAt).toLocaleDateString()}
+              </span>
+            </div>
+          ))}
+      </div>
     </div>
   );
 }

@@ -1,10 +1,14 @@
 .newsItemList {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  padding: 40px;
+  justify-content: flex-start;
+  padding: 50px;
   background: rgba(0, 0, 100, .5);
   border-radius: 48px;
+  height: 500px;
+  max-height: 500px;
+  width: 445px;
+  max-width: 445px;
 }
 
 .hero {
@@ -25,4 +29,37 @@
 .body {
   font-family: bookman serif;
   font-weight: 300;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.itemsContainer {
+  overflow-y: scroll;
+}
+
+.newspaper {
+  animation-name: spin;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  width: fit-content;
+  font-size: 3rem;
+}
+
+.newspaper--loading {
+  animation-iteration-count: infinite;
+}
+
+.newspaper--settled {
+  animation-iteration-count: 0;
+}
+
+@keyframes spin {
+    to {
+        transform:rotate(360deg);
+    }
 }
