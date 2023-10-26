@@ -22,13 +22,13 @@ export function NewsFeed() {
 
   return (
     <div className={styles.newsItemList}>
-      <h1>NewsFeed! 🗞️</h1>
+      <h1 className={styles.hero}>NewsFeed! 🗞️</h1>
 
       {data.data.map(({ attributes, id }) => (
         <div key={id} className={styles.newsItem}>
-          <h2>{attributes.Title}</h2>
+          <h2 className={styles.headline}>{attributes.Title}</h2>
 
-          <h3>
+          <h3 className={styles.body}>
             <i>{attributes.Body}</i>
           </h3>
 
